@@ -1,4 +1,4 @@
-import { Controller, Get, Param, Post, Body } from '@nestjs/common';
+import { Controller, Get, Param, Post, Body, HttpCode } from '@nestjs/common';
 
 @Controller('booking')
 export class BookingController {
@@ -21,6 +21,7 @@ export class BookingController {
   }
 
   @Post()
+  @HttpCode(202) // Custom Http Status Code (Default for POST is 201)
   // Body of The Request
   create(@Body('name') name: string) {
     return name;
