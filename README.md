@@ -108,4 +108,12 @@ Nest is [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).
 $ mkdir nest
 $ cd nest
 $ nest new .
+$ npm run start:dev
+```
+
+#### 2. Creating a New Controller
+
+```bash
+$ nest g module booking
+$ nest g co booking
 ```
