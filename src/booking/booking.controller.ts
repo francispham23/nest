@@ -1,4 +1,4 @@
-import { Controller, Get, Param, Post } from '@nestjs/common';
+import { Controller, Get, Param, Post, Body } from '@nestjs/common';
 
 @Controller('booking')
 export class BookingController {
@@ -6,6 +6,7 @@ export class BookingController {
   findAll() {
     return 'All Bookings';
   }
+
   /* Single Route Parameter
     @Get(':id')
     findOne(@Param('id') id: string) {
@@ -20,7 +21,8 @@ export class BookingController {
   }
 
   @Post()
-  create() {
-    return 'Booking Created';
+  // Body of The Request
+  create(@Body('name') name: string) {
+    return name;
   }
 }
